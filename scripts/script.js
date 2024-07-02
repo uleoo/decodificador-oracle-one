@@ -1,35 +1,27 @@
 var inputUsuario;
 var output = document.getElementById("output");
-var criptografado;
+var result;
+
 function Criptografar() {
     document.getElementById("imgout").style.display = "none";
     document.getElementById("subtituloOutput").style.display = "none";
-    inputUsuario = document.getElementById("inputUsuario")
-    criptografado = inputUsuario.value.split('')
-    for(var i = 0; i < criptografado.length; i++) {
-        if (criptografado[i] == "e") {
-            criptografado[i] = "enter"
-        } else if (criptografado[i] == "i") {
-            criptografado[i] = "imes"
-        } else if (criptografado[i] == "a") {
-            criptografado[i] = "ai"
-        } else if (criptografado[i] == "o") {
-            criptografado[i] = "ober"
-        } else if (criptografado[i] == "u") {
-            criptografado[i] = "ufat"
-        }
-    }
-    console.log(criptografado)
-    var resultado = criptografado.join("");
-    output.value = output.innerHTML = resultado
+    inputUsuario = document.getElementById("inputUsuario").value
+    result = inputUsuario.replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat")
+    output.value = output.innerHTML = result
 }
 
 function Descriptografar() {
-    resultado = criptografado.join("");
-    var result = resultado.replace(/enter/gi, "e")
-    .replace(/imes/gi, "i")
-    .replace(/ai/gi, "a")
-    .replace(/ober/gi, "o")
-    .replace(/ufat/gi, "u")
+    document.getElementById("imgout").style.display = "none";
+    document.getElementById("subtituloOutput").style.display = "none";
+    inputUsuario = document.getElementById("inputUsuario").value
+    result = inputUsuario.replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u")
     output.value = output.innerHTML = result
 }
