@@ -23,21 +23,13 @@ function Criptografar() {
     var resultado = criptografado.join("");
     output.value = output.innerHTML = resultado
 }
+
 function Descriptografar() {
-    for(var i = 0; i < criptografado.length; i++) {
-        if (criptografado[i] == "enter") {
-            criptografado[i] = "e"
-        } else if (criptografado[i] == "imes") {
-            criptografado[i] = "i"
-        } else if (criptografado[i] == "ai") {
-            criptografado[i] = "a"
-        } else if (criptografado[i] == "ober") {
-            criptografado[i] = "o"
-        } else if (criptografado[i] == "ufat") {
-            criptografado[i] = "u"
-        }
-    }
-    console.log(criptografado)
     resultado = criptografado.join("");
-    output.value = output.innerHTML = resultado
+    var result = resultado.replace(/enter/gi, "e")
+    .replace(/imes/gi, "i")
+    .replace(/ai/gi, "a")
+    .replace(/ober/gi, "o")
+    .replace(/ufat/gi, "u")
+    output.value = output.innerHTML = result
 }
