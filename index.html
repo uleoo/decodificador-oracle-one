@@ -9,16 +9,17 @@
 <body>
     <main>
         <section class="input">
-            <textarea name="" id="inputUsuario" placeholder="Digite seu texto aqui..." cols="45"></textarea>
+            <textarea name="" id="input-usuario" placeholder="Digite seu texto aqui..." cols="45"></textarea>
             <div class="input-botoes">
-                <button class="botao" onclick="Criptografar()">CRIPTOGRAFAR</button>
-                <button class="botao" onclick="Descriptografar()">DESCRIPTOGRAFAR</button>
+                <button class="botao" onclick="criptografar()">CRIPTOGRAFAR</button>
+                <button class="botao" onclick="descriptografar()">DESCRIPTOGRAFAR</button>
             </div>
         </section>
         <section class="output">
-            <img id="imgout" src="./assets/High quality products 1 1.svg" alt="">
-            <h2 id="subtituloOutput">Nenhum texto encontrado.</h2>
+            <img id="img-out" src="./assets/High quality products 1 1.svg" alt="">
+            <h2 id="subtitulo-output">Nenhum texto encontrado.</h2>
             <p id="output">Digite um texto para criptografar ou descriptografar.</p>
+            <button class="botao" id="botao-copiar">Copiar</button>
         </section>
     </main>
     <script src="./scripts/script.js"></script>

@@ -1,27 +1,39 @@
 var inputUsuario;
 var output = document.getElementById("output");
 var result;
+var botaoCopiar = document.getElementById("botao-copiar");
+botaoCopiar.style.display = "none"
 
-function Criptografar() {
-    document.getElementById("imgout").style.display = "none";
-    document.getElementById("subtituloOutput").style.display = "none";
-    inputUsuario = document.getElementById("inputUsuario").value
+botaoCopiar.addEventListener("click", () => {
+    console.log('ok2');
+    navigator.clipboard.writeText(output.value);
+})
+
+function criptografar() {
+    inputUsuario = document.getElementById("input-usuario").value;
     result = inputUsuario.replace(/e/g, "enter")
     .replace(/i/g, "imes")
     .replace(/a/g, "ai")
     .replace(/o/g, "ober")
-    .replace(/u/g, "ufat")
-    output.value = output.innerHTML = result
+    .replace(/u/g, "ufat");
+    output.value = output.innerHTML = result;
+    limpar()
 }
 
-function Descriptografar() {
-    document.getElementById("imgout").style.display = "none";
-    document.getElementById("subtituloOutput").style.display = "none";
-    inputUsuario = document.getElementById("inputUsuario").value
+function descriptografar() {
+    inputUsuario = document.getElementById("input-usuario").value;
     result = inputUsuario.replace(/enter/g, "e")
     .replace(/imes/g, "i")
     .replace(/ai/g, "a")
     .replace(/ober/g, "o")
-    .replace(/ufat/g, "u")
-    output.value = output.innerHTML = result
+    .replace(/ufat/g, "u");
+    output.value = output.innerHTML = result;
+    limpar()
+}
+function limpar () {
+    document.getElementById("img-out").style.display = "none";
+    document.getElementById("subtitulo-output").style.display = "none";
+    botaoCopiar.style.display = "";
+    inputUsuario = document.getElementById("input-usuario");
+    inputUsuario.value = '';
 }
