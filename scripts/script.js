@@ -42,6 +42,8 @@ function limpar () {
     document.getElementById("img-out").style.display = "none";
     document.getElementById("subtitulo-output").style.display = "none";
     botaoCopiar.style.display = "";
+    let justify = document.getElementById("output2")
+    justify.style.justifyContent = "space-between"
     inputUsuario = document.getElementById("input-usuario");
     inputUsuario.value = '';
 }
