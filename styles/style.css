@@ -85,6 +85,9 @@ textarea {
     background-color: #a04ccc9c;
     cursor: pointer;
 }
+.botao:active {
+    background-color: #4e0077;
+}
 .output img {
     max-width: 100%;
     height: 50%;
