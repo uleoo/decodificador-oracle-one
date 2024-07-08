@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100vw;
     height: 100vh;
@@ -13,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    
 }
 main {
     background-color: #0c00228e;
@@ -47,7 +49,15 @@ section {
     text-align: center;
     font-size: 1.5rem;
     gap: 5%;
-    word-break: break-all;  
+    word-break: break-all;
+    overflow: auto;
+}
+.output::-webkit-scrollbar{
+	width: 6px;
+	background-color: #5100a7;
+}
+.output::-webkit-scrollbar-thumb{
+	background-color: #020024;
 }
 textarea {
     background-color: #0822b900;
