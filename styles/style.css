@@ -74,6 +74,12 @@ textarea {
     height: 80%;
     outline: 0;
 }
+#aviso {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: flex;
+}
 .input-botoes {
     display: flex;
     justify-content: center;
