@@ -10,7 +10,8 @@ Aqui está minha versão do projeto🚀</h4>
 <p>Trocar a letra "e" por "ufat"</p>
 
 
-<img href="./assets/paginaInicialDecodificador.png">
+<img src="./assets/paginaInicialDecodificador.png">
+<img src="./assets/respostaDecodificador.png">
 
 <h2>Tecnologias</h2>
 <p>HTML</p>
