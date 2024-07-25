@@ -9,8 +9,9 @@ Aqui está minha versão do projeto🚀</h4>
 <p>Trocar a letra "e" por "ober"</p>
 <p>Trocar a letra "e" por "ufat"</p>
 
-
+<h5>Pagina Inicial</h5>
 <img src="./assets/paginaInicialDecodificador.png">
+<h5>Mensagem secreta descriptografada</h5>
 <img src="./assets/respostaDecodificador.png">
 
 <h2>Tecnologias</h2>
