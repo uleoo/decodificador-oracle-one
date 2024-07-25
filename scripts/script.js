@@ -9,12 +9,19 @@ botaoCopiar.addEventListener("click", () => {
 
 function criptografar() {
     inputUsuario = copiarInput()
-    result = inputUsuario.replace(/e/g, "enter")
-    .replace(/i/g, "imes")
-    .replace(/a/g, "ai")
-    .replace(/o/g, "ober")
-    .replace(/u/g, "ufat");
-    output.value = output.innerHTML = result;
+
+    if (inputUsuario === 0) {
+        alert("Escreva sua entrada.")
+    } else if (inputUsuario.match(/[^a-z\s]/)) {
+        alert("Apenas letra minusculas e sem acentos.")
+    } else {
+        result = inputUsuario.replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
+        output.value = output.innerHTML = result;
+    }
     limpar()
 }
 
